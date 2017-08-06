@@ -102,7 +102,7 @@ if ($_POST["submit"]) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Description" content="The Gandhi Restaurant Portsmouth is a fmaily business established in 1979, making it the longest functioning Indian and Bengali cuisine supplier in the city. Utilising locally-sourced fresh produce combined with authentic Indian and Bengali spices to create the real taste of the region.">
+  <meta name="Description" content="The Gandhi Restaurant Portsmouth is a family business established in 1979, making it the longest functioning Indian and Bengali cuisine supplier in the city. Utilising locally-sourced fresh produce combined with authentic Indian and Bengali spices to create the real taste of the region.">
   <meta name="Author" content="James Lomas">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
@@ -1519,50 +1519,14 @@ if ($_POST["submit"]) {
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
   <script>
     window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
   </script>
   <script src="js/bootstrap.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="js/main.js"></script>
-  <script type="text/javascript">
-  </script>
-  <script>
-    /* sliding menu gallery */
-
-    $(function () {
-
-      $('.gallery').each(function () {
-
-        var $gal = $(this),
-          $movable = $(".movable", $gal),
-          $slides = $(">*", $movable),
-          N = $slides.length,
-          C = 0,
-          itv = null;
-
-
-        function stop() {
-          clearInterval(itv);
-        }
-
-        function anim() {
-          C = ($(this).is(".prev") ? --C : ++C) < 0 ? N - 1 : C % N;
-          $movable.css({
-            transform: "translateX(-" + (C * 100) + "%)"
-          });
-        }
-
-        $(".prev, .next", this).on("click", anim);
-        $gal.hover(stop, play);
-        play();
-
-      });
-
-    });
-
-    /* sliding menu gallery end */
-  </script>
+  
 
   <div class="grammarly-disable-indicator"></div>
 

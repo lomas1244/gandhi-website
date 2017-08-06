@@ -62,17 +62,19 @@ if ($_POST["submit"]) {
 
          } else {
 
-		 if (mail($to_mail, "Reservation", "First Name: ".
-			$_POST['form-first-name']."
+      $firstName = $_POST['form-first-name'];
+			$surname = $_POST['form-surname'];
+			$email = $_POST['form-email'];
+			$mobile = $_POST['form-mobile'];
+			$guests = $_POST['form-guests'];
+			$date = $_POST['date-input'];
+			$time = $_POST['form-time'];
+			$reservation = $_POST['form-reservation'];
 
-			 Surname: ".$_POST['form-surname']."
-			 Email: ".$_POST['form-email']."
-			 Mobile: ".$_POST['form-mobile']."
-			 Guests: ".$_POST['form-guests']."
-			 Date: ".$_POST['date-input']."
-			 Time: ".$_POST['form-time']."
+      $body = "First Name: $firstName\nSurname: $surname\nE-Mail: $email\nMobile: $mobile\nGuests: $guests\nDate: $date\nTime: $time\nReservation: $reservation";
 
-			 Reservation: ".$_POST['form-reservation'])) {
+
+		 if (mail($to_mail, "Reservation", $body)) {
 
 			 $result='<div class="alert alert-success">
 			    <strong>

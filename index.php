@@ -33,7 +33,7 @@ if ($_POST["submit"]) {
 
          }
 
-         if (!$_POST['example-date-input']) {
+         if (!$_POST['date-input']) {
 
              $error.="<br />Please enter date";
 
@@ -62,14 +62,14 @@ if ($_POST["submit"]) {
 
          } else {
 
-		 if (mail($to_mail, "Booking Request", "First Name: ".
+		 if (mail($to_mail, "Reservation", "First Name: ".
 			$_POST['form-first-name']."
 
 			 Surname: ".$_POST['form-surname']."
 			 Email: ".$_POST['form-email']."
 			 Mobile: ".$_POST['form-mobile']."
 			 Guests: ".$_POST['form-guests']."
-			 Date: ".$_POST['example-date-input']."
+			 Date: ".$_POST['date-input']."
 			 Time: ".$_POST['form-time']."
 
 			 Reservation: ".$_POST['form-reservation'])) {
@@ -1235,45 +1235,45 @@ if ($_POST["submit"]) {
               </div>
 
               <div class="col-sm-3 form-group">
-                <label for="example-date-input" class="col-2 col-form-label">Date</label>
+                <label for="date-input" class="col-2 col-form-label">Date</label>
                 <div class="col-10">
-                  <input class="form-control" type="date" value="today" id="example-date-input">
+                  <input class="form-control" type="date" value="today" id="date-input">
                 </div>
               </div>
 
               <div class="col-sm-2 form-group">
-                <label for="example-date-input" class="col-2 col-form-label">Time</label>
+                <label for="date-input" class="col-2 col-form-label">Time</label>
                 <div class="col-10">
-                  <select class="form-control">
+                  <select class="form-control" name="form-time">
                     <option selected>Choose...</option>
-                      <option value="1">17.00</option>
-                      <option value="2">17.30</option>
-                      <option value="3">18.00</option>
-                      <option value="4">18.30</option>
-                      <option value="5">19.00</option>
-                      <option value="6">19.30</option>
-                      <option value="7">20.00</option>
-                      <option value="8">20.30</option>
-                      <option value="9">21.00</option>
-                      <option value="10">21.30</option>
-                      <option value="11">22.00</option>
-                      <option value="12">22.30</option>
-                      <option value="13">23.00</option>
-                    </select>
+                    <option value="17:00">17.00</option>
+                    <option value="17:30">17.30</option>
+                    <option value="18:00">18.00</option>
+                    <option value="18:30">18.30</option>
+                    <option value="19:00">19.00</option>
+                    <option value="19:30">19.30</option>
+                    <option value="20:00">20.00</option>
+                    <option value="20:30">20.30</option>
+                    <option value="21:00">21.00</option>
+                    <option value="21:30">21.30</option>
+                    <option value="22:00">22.00</option>
+                    <option value="22:30">22.30</option>
+                    <option value="23:00">23.00</option>
+                  </select>
                 </div>
               </div>
 
               <div class="col-sm-3 form-group">
-                <label for="example-date-input" class="col-2 col-form-label">Reservation type</label>
+                <label for="date-input" class="col-2 col-form-label">Reservation type</label>
                 <div class="col-10">
-                  <select class="form-control">
+                  <select class="form-control" name="form-reservation">
                     <option selected>Choose...</option>
-                      <option value="1">Dinner</option>
-                      <option value="2">Anniversary</option>
-                      <option value="3">Birthday</option>
-                      <option value="4">Private event</option>
-                      <option value="5">Wedding</option>
-                      <option value="6">Corporate</option>
+                      <option value="Dinner">Dinner</option>
+                      <option value="Anniversary">Anniversary</option>
+                      <option value="Birthday">Birthday</option>
+                      <option value="Private Event">Private event</option>
+                      <option value="Wedding">Wedding</option>
+                      <option value="Corporate">Corporate</option>
                   </select>
                 </div>
               </div>
@@ -1357,9 +1357,9 @@ if ($_POST["submit"]) {
               </div>
 
               <div class="col-sm-3 form-group">
-                <label for="example-date-input" class="col-2 col-form-label">Date</label>
+                <label for="date-input" class="col-2 col-form-label">Date</label>
                 <div class="col-10">
-                  <input class="form-control" type="date" value="today" name="example-date-input" id="example-date-input">
+                  <input class="form-control" type="date" value="today" name="date-input" id="date-input">
                 </div>
               </div>
 
@@ -1368,19 +1368,19 @@ if ($_POST["submit"]) {
                 <div class="col-10">
                   <select class="form-control" name="form-time">
                     <option selected>Choose...</option>
-                    <option value="1">17.00</option>
-                    <option value="2">17.30</option>
-                    <option value="3">18.00</option>
-                    <option value="4">18.30</option>
-                    <option value="5">19.00</option>
-                    <option value="6">19.30</option>
-                    <option value="7">20.00</option>
-                    <option value="8">20.30</option>
-                    <option value="9">21.00</option>
-                    <option value="10">21.30</option>
-                    <option value="11">22.00</option>
-                    <option value="12">22.30</option>
-                    <option value="13">23.00</option>
+                    <option value="17:00">17.00</option>
+                    <option value="17:30">17.30</option>
+                    <option value="18:00">18.00</option>
+                    <option value="18:30">18.30</option>
+                    <option value="19:00">19.00</option>
+                    <option value="19:30">19.30</option>
+                    <option value="20:00">20.00</option>
+                    <option value="20:30">20.30</option>
+                    <option value="21:00">21.00</option>
+                    <option value="21:30">21.30</option>
+                    <option value="22:00">22.00</option>
+                    <option value="22:30">22.30</option>
+                    <option value="23:00">23.00</option>
                   </select>
                 </div>
               </div>
@@ -1390,12 +1390,12 @@ if ($_POST["submit"]) {
                 <div class="col-10">
                   <select class="form-control" name="form-reservation">
                     <option selected>Choose...</option>
-                      <option value="1">Dinner</option>
-                      <option value="2">Anniversary</option>
-                      <option value="3">Birthday</option>
-                      <option value="4">Private event</option>
-                      <option value="5">Wedding</option>
-                      <option value="6">Corporate</option>
+                      <option value="Dinner">Dinner</option>
+                      <option value="Anniversary">Anniversary</option>
+                      <option value="Birthday">Birthday</option>
+                      <option value="Private Event">Private event</option>
+                      <option value="Wedding">Wedding</option>
+                      <option value="Corporate">Corporate</option>
                   </select>
                 </div>
               </div>
@@ -1407,13 +1407,13 @@ if ($_POST["submit"]) {
               <div class="col-sm-10">
                 <div class="form-check">
                   <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="I'm an existing APOS rewards customer" checked>
           I'm an existing APOS rewards customer
         </label>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="I'm new to APOS">
           I'm new to APOS
         </label>
                 </div>

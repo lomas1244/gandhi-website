@@ -1,5 +1,4 @@
 <?php
-
 $to_mail = "bookings@gandhirestaurant.co.uk";
 if ($_POST["submit"]) {
 
@@ -70,11 +69,16 @@ if ($_POST["submit"]) {
 			$date = $_POST['date-input'];
 			$time = $_POST['form-time'];
 			$reservation = $_POST['form-reservation'];
+      $apos = $_POST['form-apos'];
 
-      $body = "First Name: $firstName\nSurname: $surname\nE-Mail: $email\nMobile: $mobile\nGuests: $guests\nDate: $date\nTime: $time\nReservation: $reservation";
+
+      $from = 'bookings@gandhirestaurant.co.uk';
+      $headers .= 'From: ' . $from . "\r\n";
+
+      $body = "First Name: $firstName\nSurname: $surname\nE-Mail: $email\nMobile: $mobile\nGuests: $guests\nDate: $date\nTime: $time\nReservation: $reservation\nAPOS Customer: $apos";
 
 
-		 if (mail($to_mail, "Reservation", $body)) {
+		 if (mail($to_mail, "Reservation", $body, $headers)) {
 
 			 $result='<div class="alert alert-success">
 			    <strong>
@@ -1287,13 +1291,13 @@ if ($_POST["submit"]) {
               <div class="col-sm-10">
                 <div class="form-check">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="form-apos" id="gridRadios1" value="Yes" checked>
                     I'm an existing APOS rewards customer
                   </label>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="radio" name="form-apos" id="gridRadios2" value="No">
                     I'm new to APOS
                   </label>
                 </div>
@@ -1302,7 +1306,7 @@ if ($_POST["submit"]) {
             <div>
               <button style="margin-top: 15px; margin-left: 10px;" type="submit" class="btn btn-primary">Confirm</button>
 
-              <p class="text-muted" style="float: right; font-size: 12px; margin-top: 15px;">Powered by<img href="https://www.accentpos.com" style="width: 50px; padding-left: 10px;" src="img/gandhi-images/APOS-logo.png"></p>
+              <p class="text-muted" style="float: right; font-size: 12px; margin-top: 15px;">Powered by<a href="https://www.accentpos.com"><img src="img/gandhi-images/APOS-logo.png" style="width: 50px; padding-left: 10px;"></a></p>
             </div>
           </div>
 
@@ -1409,13 +1413,13 @@ if ($_POST["submit"]) {
               <div class="col-sm-10">
                 <div class="form-check">
                   <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="I'm an existing APOS rewards customer" checked>
+          <input class="form-check-input" type="radio" name="form-apos" id="gridRadios1" value="Yes" checked>
           I'm an existing APOS rewards customer
         </label>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="I'm new to APOS">
+          <input class="form-check-input" type="radio" name="form-apos" id="gridRadios2" value="No">
           I'm new to APOS
         </label>
                 </div>
@@ -1424,7 +1428,7 @@ if ($_POST["submit"]) {
             <div>
 
               <!-- Button trigger modal -->
-              <input type="submit" name="submit" class="btn btn-primary" value="Confirm" data-toggle="modal" data-target="#myModal" formaction="index.php?" />
+              <input type="submit" name="submit" class="btn btn-primary" value="Confirm" data-toggle="modal" data-target="#myModal" formaction="test.php?" />
               <!--<button type="submit" class="btn btn-primary" >Confirm</button>-->
 
               <!-- Modal -->
@@ -1451,7 +1455,7 @@ if ($_POST["submit"]) {
                 </div>
               </div>
 
-              <p class="text-muted" style="float: right; font-size: 12px; margin-top: 15px;">Powered by<img href="https://www.accentpos.com" style="width: 50px; padding-left: 10px;" src="img/gandhi-images/APOS-logo.png"></p>
+              <p class="text-muted" style="float: right; font-size: 12px; margin-top: 15px;">Powered by<a href="https://www.accentpos.com"><img src="img/gandhi-images/APOS-logo.png" style="width: 50px; padding-left: 10px;"></a></p>
             </div>
           </div>
 
@@ -1534,4 +1538,4 @@ if ($_POST["submit"]) {
 
 </body>
 
-</html>
+</html>	

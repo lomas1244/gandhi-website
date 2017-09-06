@@ -1328,21 +1328,21 @@ if ($_POST["submit"]) {
               <div class="col-sm-3 form-group">
                 <label for="example-text-input" class="col-2 col-form-label">First name</label>
                 <div class="col-10">
-                  <input class="form-control" type="text" name="form-first-name">
+                  <input class="form-control" type="text" name="form-first-name" required>
                 </div>
               </div>
 
               <div class="col-sm-3 form-group">
                 <label for="example-text-input" class="col-2 col-form-label">Surname</label>
                 <div class="col-10">
-                  <input class="form-control" type="text" name="form-surname">
+                  <input class="form-control" type="text" name="form-surname" required>
                 </div>
               </div>
 
               <div class="col-sm-6 form-group">
                 <label for="example-email-input" class="col-2 col-form-label">Email</label>
                 <div class="col-10">
-                  <input class="form-control" type="email" placeholder="gandhi@example.com" name="form-email">
+                  <input class="form-control" type="email" placeholder="gandhi@example.com" name="form-email" required>
                 </div>
               </div>
             </div>
@@ -1351,28 +1351,28 @@ if ($_POST["submit"]) {
               <div class="col-sm-2 form-group">
                 <label for="example-text-input" class="col-2 col-form-label">Mobile number</label>
                 <div class="col-10">
-                  <input class="form-control" type="tel" name="form-mobile" placeholder="07123456789">
+                  <input class="form-control" type="tel" name="form-mobile" placeholder="07123456789" required>
                 </div>
               </div>
 
               <div class="col-sm-2 form-group">
                 <label for="example-number-input" class="col-2 col-form-label">Number of guests</label>
                 <div class="col-10">
-                  <input class="form-control" type="number" name="form-guests">
+                  <input class="form-control" type="number" name="form-guests" required>
                 </div>
               </div>
 
               <div class="col-sm-3 form-group">
                 <label for="date-input" class="col-2 col-form-label">Date</label>
                 <div class="col-10">
-                  <input class="form-control" type="date" value="today" name="date-input" id="date-input">
+                  <input class="form-control" type="date" value="today" name="date-input" id="date-input" required>
                 </div>
               </div>
 
               <div class="col-sm-2 form-group">
                 <label for="form-time" class="col-2 col-form-label">Time</label>
                 <div class="col-10">
-                  <select class="form-control" name="form-time">
+                  <select class="form-control" name="form-time" required>
                     <option selected>Choose...</option>
                     <option value="17:00">17.00</option>
                     <option value="17:30">17.30</option>
@@ -1394,7 +1394,7 @@ if ($_POST["submit"]) {
               <div class="col-sm-3 form-group">
                 <label for="form-reservation" class="col-2 col-form-label">Reservation type</label>
                 <div class="col-10">
-                  <select class="form-control" name="form-reservation">
+                  <select class="form-control" name="form-reservation" required>
                     <option selected>Choose...</option>
                       <option value="Dinner">Dinner</option>
                       <option value="Anniversary">Anniversary</option>
@@ -1413,13 +1413,13 @@ if ($_POST["submit"]) {
               <div class="col-sm-10">
                 <div class="form-check">
                   <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="form-apos" id="gridRadios1" value="Yes" checked>
+          <input class="form-check-input" type="radio" name="form-apos" id="gridRadios1" value="Yes">
           I'm an existing APOS rewards customer
         </label>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="form-apos" id="gridRadios2" value="No">
+          <input class="form-check-input" type="radio" name="form-apos" id="gridRadios2" value="No" checked>
           I'm new to APOS
         </label>
                 </div>
@@ -1428,11 +1428,11 @@ if ($_POST["submit"]) {
             <div>
 
               <!-- Button trigger modal -->
-              <input type="submit" name="submit" class="btn btn-primary" value="Confirm" data-toggle="modal" data-target="#myModal" formaction="test.php?" />
+              <input type="submit" name="submit" class="btn btn-primary" value="Confirm" data-toggle="modal" data-target="#myModal" formaction="index.php?" />
               <!--<button type="submit" class="btn btn-primary" >Confirm</button>-->
 
               <!-- Modal -->
-              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -1453,7 +1453,7 @@ if ($_POST["submit"]) {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <p class="text-muted" style="float: right; font-size: 12px; margin-top: 15px;">Powered by<a href="https://www.accentpos.com"><img src="img/gandhi-images/APOS-logo.png" style="width: 50px; padding-left: 10px;"></a></p>
             </div>

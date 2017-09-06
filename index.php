@@ -1,5 +1,5 @@
 <?php
-$to_mail = "bookings@gandhirestaurant.co.uk";
+$to_mail = "bookings@gandhirestaurant.co.uk, christian.leovido@accent-itservices.co.uk";
 if ($_POST["submit"]) {
 
          if (!$_POST['form-first-name']) {

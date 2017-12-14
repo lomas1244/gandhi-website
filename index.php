@@ -1304,7 +1304,9 @@ if ($_POST["submit"]) {
               </div>
             </fieldset>
             <div>
-              <button style="margin-top: 15px; margin-left: 10px;" type="submit" class="btn btn-primary">Confirm</button>
+              <!-- <button style="margin-top: 15px; margin-left: 10px;" type="submit" class="btn btn-primary">Confirm</button> -->
+
+              <input style="margin-top: 15px; margin-left: 10px;" type="submit" name="submit" class="btn btn-primary" value="Confirm" data-toggle="modal" data-target="#myModal" formaction="index.php?" />
 
               <p class="text-muted" style="float: right; font-size: 12px; margin-top: 15px;">Powered by<a href="https://www.accentpos.com"><img src="img/gandhi-images/APOS-logo.png" style="width: 50px; padding-left: 10px;"></a></p>
             </div>
